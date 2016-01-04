@@ -5,6 +5,8 @@
     <title>Curso de jQuery</title>
     <!--libreria de jQuery-->
     <script src="js/lib/jquery-2.1.4.min.js"></script>
+    <!-- libreria de bootstrap-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <style>
     
         .textoVerde{
@@ -30,27 +32,57 @@
 </head>
 <body>
 
-       <div class="container">
-         <h1>Este es el curso de jQuery</h1>
-          
-           <ul>
-               <li>Hola 1</li>
-               <li>Hola 2</li>
-               <li>Hola 3</li>
-           </ul>
+   <div class="container">
+     <h1>Leccion 4 Usando bootstrap</h1>
+      <hr>
+       <ul>
+           <li><spa class="label label-primary">Hola 1</spa></li>
+           <li>Hola 2</li>
+           <li>Hola 3</li>
+       </ul>
+
+       <ul>
+           <li>Negreta 1</li>
+           <li>Negrita 2</li>
+           <li>Negrita 3</li>
+       </ul>
+       
+       <button class="btn btn-primary">Guardar</button>
+       <br>
+       <br>
+       <div class="row">
            
-           <ul>
-               <li>Negreta 1</li>
-               <li>Negrita 2</li>
-               <li>Negrita 3</li>
-           </ul>
-           
-           
+           <div class="col-sm-6" align="center">
+               
+               
+           <table class="text-center table table-striped" >
+               <tr>
+                   <th>columno 1</th>
+                   <th>columna 2</th>
+                   <th>columna 3</th>
+               </tr>
+               <tr>
+                   <td>campo</td>
+                   <td>campo</td>
+                   <td>campo</td>
+               </tr>
+                <tr>
+                   <td>campo</td>
+                   <td>campo</td>
+                   <td>campo</td>
+               </tr>
+           </table>
+           <br><br>
+               
+           </div>
            
        </div>
-       
+       <input type="text" class="form-control" placeholder="introduzca texto aqui">
 
-    
-    
+
+
+
+   </div>
+
 </body>
 </html>
