@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Curso de jQuery</title>
+    <!--libreria de jQuery-->
+    <script src="js/lib/jquery-2.1.4.min.js"></script>
+    <style>
+    
+        .textoVerde{
+            color:green;
+        }
+        .textoNegrita{
+            font-weight: bold;
+        }
+        
+    
+    </style>
+</head>
+<body>
+
+       <div class="container">
+         <h1>Este es el curso de jQuery</h1>
+          
+           <ul>
+               <li>Hola 1</li>
+               <li>Hola 2</li>
+               <li>Hola 3</li>
+           </ul>
+           
+           <ul>
+               <li>Negreta 1</li>
+               <li>Negrita 2</li>
+               <li>Negrita 3</li>
+           </ul>
+           
+           
+           
+       </div>
+       
+
+    
+        <script>
+            $('ul')
+                .addClass('textoVerde')//declaracion y llamado de una funcion en jQuery
+                .addClass('textoNegrita');
+            
+          /*  function nombreFuncion(){//funcion en javaScript
+            }
+            nombreFuncion();//llamado de una funcion de javascript*/
+        </script>
+    
+</body>
+</html>
