@@ -8,81 +8,55 @@
     <!-- libreria de bootstrap-->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <style>
-    
-        .textoVerde{
-            color:green;
+        img{
+            width: 200px;
+            height:200px;    
         }
-        .textoNegrita{
-            font-weight: bold;
+        hr{
+            margin-bottom: 60px;
         }
-        
     
     </style>
-        <script>    
-            $(document).ready(function(){
-            $('li:last-child')
-                .addClass('textoVerde')//declaracion y llamado de una funcion en jQuery
-                .addClass('textoNegrita');        
-            })
-           
-          /*  function nombreFuncion(){//funcion en javaScript
-            }
-            nombreFuncion();//llamado de una funcion de javascript*/
-        </script>
 </head>
 <body>
-
    <div class="container">
-     <h1>Leccion 4 Usando bootstrap</h1>
-      <hr>
-       <ul>
-           <li><spa class="label label-primary">Hola 1</spa></li>
-           <li>Hola 2</li>
-           <li>Hola 3</li>
-       </ul>
-
-       <ul>
-           <li>Negreta 1</li>
-           <li>Negrita 2</li>
-           <li>Negrita 3</li>
-       </ul>
-       
-       <button class="btn btn-primary">Guardar</button>
-       <br>
-       <br>
+       <h1>Selectores y Encadenamientos</h1>
+       <hr>
        <div class="row">
-           
-           <div class="col-sm-6" align="center">
-               
-               
-           <table class="text-center table table-striped" >
-               <tr>
-                   <th>columno 1</th>
-                   <th>columna 2</th>
-                   <th>columna 3</th>
-               </tr>
-               <tr>
-                   <td>campo</td>
-                   <td>campo</td>
-                   <td>campo</td>
-               </tr>
-                <tr>
-                   <td>campo</td>
-                   <td>campo</td>
-                   <td>campo</td>
-               </tr>
-           </table>
-           <br><br>
-               
+               <div class="col-sm-4">
+                   <img src="img/nophoto.jpg" class="img-circle">
+               </div> 
+
+
+           <div class="col-sm-5">
+               <p>
+                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit quo dolore quibusdam numquam error iure, magni earum nemo est. Esse soluta possimus voluptate praesentium quisquam harum error sed maxime aliquid.
+               </p>
            </div>
-           
+           <div class="col-sm-3">
+               <ul>
+                   <li>Matematicas</li>
+                   <li>Programacion</li>
+                   <li>Analisis</li>
+                   <li>Fisica</li>
+                   <li>Geografia</li>
+               </ul>
+           </div>
        </div>
-       <input type="text" class="form-control" placeholder="introduzca texto aqui">
-
-
-
-
    </div>
-
+   
+   <script>
+       $("img")
+           .attr("src", "img2/mujer.jpg")
+            .removeClass('img-circle')
+            .addClass('img-thumbnail img-circle');
+            
+       
+      /* $("img")
+           .attr("src","img/profesor.jpg")//cambia el src
+           .removeClass('img-circle')//remueve la clase
+           .addClass('img-thumbnail');//agrega la clase
+       */
+   </script>
 </body>
 </html>
