@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,57 +7,72 @@
     <!--libreria de jQuery-->
     <script src="js/lib/jquery-2.1.4.min.js"></script>
     <!-- libreria de bootstrap-->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <style>
-        img{
-            width: 200px;
-            height:200px;    
-        }
-        hr{
-            margin-bottom: 60px;
-        }
-    
+      .img100{
+          width:100px;
+          height:100px;
+
+      }
+      .divrojo{
+        background-color:red;
+        height:100px;
+        width:100px;
+      }
+      
     </style>
+     
 </head>
 <body>
    <div class="container">
-       <h1>Selectores y Encadenamientos</h1>
-       <hr>
-       <div class="row">
-               <div class="col-sm-4">
-                   <img src="img/nophoto.jpg" class="img-circle">
-               </div> 
+      <h1>Leccion 03: Eventos</h1>
+      <hr>
 
 
-           <div class="col-sm-5">
-               <p>
-                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit quo dolore quibusdam numquam error iure, magni earum nemo est. Esse soluta possimus voluptate praesentium quisquam harum error sed maxime aliquid.
-               </p>
-           </div>
-           <div class="col-sm-3">
-               <ul>
-                   <li>Matematicas</li>
-                   <li>Programacion</li>
-                   <li>Analisis</li>
-                   <li>Fisica</li>
-                   <li>Geografia</li>
-               </ul>
-           </div>
-       </div>
+      <button id="btn1" class="btn btn-primary">Evento click</button>
+      <br><br>
+      <img class="img100" src="img/profesor.jpg" >
+      <br><br>
+      <div class="divrojo">
+        
+      </div>
+      <br><br>
+      <a class="linkUdemy" href="http://udemy.com">Ir a Udemy</a>
+
    </div>
-   
-   <script>
-       $("img")
-           .attr("src", "img2/mujer.jpg")
-            .removeClass('img-circle')
-            .addClass('img-thumbnail img-circle');
-            
-       
-      /* $("img")
-           .attr("src","img/profesor.jpg")//cambia el src
-           .removeClass('img-circle')//remueve la clase
-           .addClass('img-thumbnail');//agrega la clase
-       */
+
+   <script type="text/javascript">
+      $("#btn1").on("click",function(){
+
+          console.log("click");
+      });
+      $(".img100").on("mouseenter",function(){
+          console.log("puntero entro en la imagen");
+          $(this).attr("src", "img/nophoto.jpg");
+      });
+
+      $(".img100").on("mouseleave",function(){
+          console.log("Puntero salio de la imagen");
+          $(this).attr("src","img/profesor.jpg")
+      });
+      $(".divrojo").on("click",function(){
+          console.log("Click en el cuadro rojo");
+      });
+
+      $(".linkUdemy").on("click",function(e){
+              e.preventDefault();
+              console.log("Click en el link..");
+              var link = $(this).attr("href");
+              console.log(link);
+
+
+      });
+
+      $(document).ready(function(){
+          console.log("la pagina esta lista para lo que sea");
+      });
    </script>
+   
+   
 </body>
 </html>
